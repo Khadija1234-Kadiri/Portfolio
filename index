@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- ══ PERFORMANCE ══ -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap">
+
+    <!-- ══ SEO — titre + description ══ -->
+    <title>Khadija Kadiri — Développeuse Web | Portfolio</title>
+    <meta name="description" content="Portfolio de Khadija Kadiri, élève ingénieure en génie informatique à la FST Errachidia. Spécialisée en développement web (PHP, Python, JS). Disponible pour un stage.">
+    <meta name="author"  content="Khadija Kadiri">
+    <meta name="robots"  content="index, follow">
+
+    <!-- ══ Open Graph (aperçu LinkedIn / WhatsApp) ══ -->
+    <meta property="og:title"       content="Khadija Kadiri — Portfolio Développeuse Web">
+    <meta property="og:description" content="Élève ingénieure FST Errachidia · PHP · Python · JS · Disponible pour stage">
+    <meta property="og:type"        content="website">
+    <meta property="og:locale"      content="fr_MA">
+
+    <!-- ══ STYLES ══ -->
+    <link rel="stylesheet" href="portoflio.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+     NAVBAR  — nav landmark pour lecteurs d'écran
+════════════════════════════════════ -->
+<nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <a href="#home" class="logo" aria-label="Khadija Kadiri — accueil">Nom<span>.</span></a>
+
+    <!-- bouton hamburger accessible -->
+    <button id="menu-icon" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-list">
+        <i class="bx bx-menu" aria-hidden="true"></i>
+    </button>
+
+    <ul class="nav-links" id="nav-list" role="list">
+        <li><a class="active" href="#home">Accueil</a></li>
+       <!-- <li><a href="#Services">Services</a></li>-->
+        <li><a href="#resume">Parcours</a></li>
+        <li><a href="#portfolio">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ════════════════════════════════════
+     TRANSITION 3D (barres)
+════════════════════════════════════ -->
+<div class="bars-animation" aria-hidden="true">
+    <div class="bar" style="--i:6;"></div>
+    <div class="bar" style="--i:5;"></div>
+    <div class="bar" style="--i:4;"></div>
+    <div class="bar" style="--i:3;"></div>
+    <div class="bar" style="--i:2;"></div>
+    <div class="bar" style="--i:1;"></div>
+</div>
+
+<!-- ════════════════════════════════════
+     HOME  — h1 unique, alt sur l'image
+════════════════════════════════════ -->
+<section class="home active" id="home" aria-label="Présentation">
+    <div class="home-info">
+       
+        <!-- Un seul h1 par page — règle WCAG + SEO -->
+        <h1>Nom Prenom</h1>
+        <p class="home-role">Etudiant en <span>spécialité</span></p>
+        <p class="home-desc">
+    etudante a la faculte\Universite <strong>XYZ</strong>, passionnée par l'<strong>ingénierie logicielle</strong>, le <strong>développement web</strong> et la création de <strong>solutions numériques innovantes</strong>.
+
+            <strong>......................</strong>
+        </p>
+        <div class="btn-container">
+            <a href="CV Nom Prenom.pdf" download class="btn" aria-label="Télécharger le CV de Nom Prenom">
+                Télécharger CV <i class="bx bx-download" aria-hidden="true"></i>
+            </a>
+            <div class="sci" role="list" aria-label="Réseaux sociaux">
+                <a href="https://www.linkedin.com"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Profil LinkedIn de Nom Prenom" role="listitem">
+                    <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Profil GitHub de Nom Prenom" role="listitem">
+                    <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="home-img" aria-hidden="true">
+        <div class="img-box">
+            <div class="img-item">
+                <!-- alt descriptif pour accessibilité -->
+                <img src="Khadija.webp"
+                     alt="Photo de Khadija Kadiri, élève ingénieure en génie informatique"
+                     width="400" height="400"
+                     loading="eager">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SERVICES  — h2 + h3 (hiérarchie correcte)
+════════════════════════════════════ -->
+<!---
+<section class="Services" id="Services" aria-label="Mes services">
+    <h2 class="heading">Mes <span>Services</span></h2>
+    <div class="services-container">
+        <article class="service-box">
+            <i class="bx bx-code-alt" aria-hidden="true"></i>
+            <h3>Développement Web</h3>
+            <p>Création de sites web responsives et dynamiques avec HTML5, CSS3, JavaScript, PHP et Laravel.</p>
+        </article>
+        <article class="service-box">
+            <i class="bx bx-data" aria-hidden="true"></i>
+            <h3>Bases de Données</h3>
+            <p>Conception et gestion de bases de données relationnelles — MySQL, Oracle, MongoDB — avec UML et Merise.</p>
+        </article>
+        <article class="service-box">
+            <i class="bx bx-brain" aria-hidden="true"></i>
+            <h3>IA &amp; Chatbots</h3>
+            <p>Développement de chatbots intelligents et d'applications IA en Python avec intégration d'APIs.</p>
+        </article>
+    </div>
+</section>
+
+---->
+<!-- ════════════════════════════════════
+     RESUME / PARCOURS
+════════════════════════════════════ -->
+<section class="resume" id="resume" aria-label="Mon parcours">
+    <div class="resume-container">
+
+        <!-- Colonne gauche : onglets -->
+        <div class="resume-box left-box">
+            <h2>Mon Parcours</h2>
+            <p>Élève ingénieure passionnée avec des projets académiques concrets et une solide maîtrise des outils du développement logiciel.</p>
+            <!-- role="tablist" pour accessibilité clavier -->
+            <div role="tablist" aria-label="Sections du parcours" class="tab-group">
+                <button class="resume-btn active" role="tab" aria-selected="true"  aria-controls="panel-exp"  id="tab-exp">
+                    <i class="bx bx-briefcase-alt-2" aria-hidden="true"></i> Expérience
+                </button>
+                <button class="resume-btn" role="tab" aria-selected="false" aria-controls="panel-edu"  id="tab-edu">
+                    <i class="bxf bx-education" aria-hidden="true"></i> Formation
+                </button>
+                <button class="resume-btn" role="tab" aria-selected="false" aria-controls="panel-skills" id="tab-skills">
+                    <i class="bx bx-code-curly" aria-hidden="true"></i> Compétences
+                </button>
+                <button class="resume-btn" role="tab" aria-selected="false" aria-controls="panel-about" id="tab-about">
+                    <i class="bx bx-user" aria-hidden="true"></i> À propos
+                </button>
+            </div>
+        </div>
+
+        <!-- Colonne droite : panneaux -->
+        <div class="resume-box right-box">
+
+            <!-- ── EXPÉRIENCE ── -->
+            <div class="resume-detail experience active" id="panel-exp" role="tabpanel" aria-labelledby="tab-exp">
+                <h2 class="heading">Mon <span>Expérience</span></h2>
+                <p class="desc">Projets académiques réalisés à l'Université XYZ .</p>
+                <p class="scroll-hint" aria-hidden="true"><i class="bx bx-mouse"></i> Défiler pour voir plus</p>
+                <div class="resume-listG scrollable">
+
+                    <article class="resume-list">
+                        <p class="year">Mars – Juin 2025</p>
+                        <h3> stage PFE</h3>
+                        <p class="company">Entreprise XYZ</p>
+                        <p>Conception et développement d'une application web dédiée à la gestion des projets de fin d'étude — rôles, soumissions, évaluations.</p>
+                        <ul class="tag-list" aria-label="Technologies utilisées">
+                            <li class="tag">HTML</li><li class="tag">CSS</li>
+                            <li class="tag">PHP</li><li class="tag">MySQL</li><li class="tag">UML</li>
+                        </ul>
+                    </article>
+
+                    <article class="resume-list">
+                        <p class="year">Février 2025</p>
+                        <h3>Chatbot de Voyage</h3>
+                        <p class="company">Projet Académique</p>
+                        <p>Chatbot proposant des recommandations de destinations, des conseils et des réponses aux questions fréquentes via API Python.</p>
+                        <ul class="tag-list" aria-label="Technologies utilisées">
+                            <li class="tag">Python</li><li class="tag">API</li>
+                        </ul>
+                    </article>
+
+                    <article class="resume-list">
+                        <p class="year">Janvier 2025</p>
+                        <h3>Mini-Compilateur – Langage Simple</h3>
+                        <p class="company">Projet Académique</p>
+                        <p>Langage dédié aux expressions arithmétiques et logiques. Interpréteur et compilateur avec PLY (Lex-Yacc) en Python.</p>
+                        <ul class="tag-list" aria-label="Technologies utilisées">
+                            <li class="tag">Python</li><li class="tag">PLY</li><li class="tag">Lex-Yacc</li>
+                        </ul>
+                    </article>
+
+                    <article class="resume-list">
+                        <p class="year">Juillet 2026</p>
+                        <h3>Stage – Développement Web</h3>
+                        <p class="company">En recherche</p>
+                        <p>Stage d'un mois pour renforcer les compétences techniques et acquérir une première expérience professionnelle en entreprise.</p>
+                        <ul class="tag-list" aria-label="Domaine">
+                            <li class="tag">Stage</li><li class="tag">Web</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- ── FORMATION ── -->
+            <div class="resume-detail education" id="panel-edu" role="tabpanel" aria-labelledby="tab-edu" hidden>
+                <h2 class="heading">Ma <span>Formation</span></h2>
+                <p class="desc">Parcours académique à l'Université XYZ.</p>
+                <p class="scroll-hint" aria-hidden="true"><i class="bx bx-mouse"></i> Défiler pour voir plus</p>
+                <div class="resume-listG scrollable">
+
+                    <article class="resume-list">
+                        <p class="year">2024 – 2025</p>
+                        <h3>Licence en Génie Logiciel</h3>
+                        <p class="company">universite XYZ</p>
+                        <p>Développement web, bases de données, compilation, UML/Merise et architecture logicielle.</p>
+                        <ul class="tag-list"><li class="tag">Génie Logiciel</li><li class="tag">Web</li><li class="tag">BDD</li></ul>
+                    </article>
+
+                    <article class="resume-list">
+                        <p class="year">2022 – 2024</p>
+                        <h3>DEUST – Sciences et Techniques</h3>
+                        <p class="company">universite XYZ</p>
+                        <p>Fondamentaux en algorithmique, programmation et mathématiques appliquées.</p>
+                        <ul class="tag-list"><li class="tag">DEUST</li><li class="tag">Algorithmique</li></ul>
+                    </article>
+
+                    <article class="resume-list">
+                        <p class="year">Avant 2022</p>
+                        <h3>Baccalauréat Sciences Math</h3>
+                        <p class="company">Lycée XYZ</p>
+                        <p>Baccalauréat scientifique, solide base en mathématiques et logique.</p>
+                        <ul class="tag-list"><li class="tag">Bac Sciences</li></ul>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- ── COMPÉTENCES ── -->
+            <div class="resume-detail skills" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" hidden>
+                <h2 class="heading">Mes <span>Compétences</span></h2>
+                <p class="desc">Technologies et outils maîtrisés.</p>
+                <p class="scroll-hint" aria-hidden="true"><i class="bx bx-mouse"></i> Défiler pour voir plus</p>
+                <ul class="resume-listG scrollable skill-grid" id="skills" aria-label="Liste des compétences techniques">
+                    <li class="resume-list skill-card"><i class="bx bxl-html5"      aria-hidden="true"></i><span>HTML5</span></li>
+                    <li class="resume-list skill-card"><i class="bx bxl-css3"       aria-hidden="true"></i><span>CSS3</span></li>
+                    <li class="resume-list skill-card"><i class="bx bxl-javascript" aria-hidden="true"></i><span>JavaScript</span></li>
+                    <li class="resume-list skill-card"><i class="bx bxl-php"        aria-hidden="true"></i><span>PHP</span></li>
+                    <li class="resume-list skill-card"><i class="bx bxl-python"     aria-hidden="true"></i><span>Python</span></li>
+                    <li class="resume-list skill-card"><i class="bx bxl-java"       aria-hidden="true"></i><span>Java</span></li>
+                    <li class="resume-list skill-card"><i class="bx bx-code"        aria-hidden="true"></i><span>C / Assembleur</span></li>
+                    <li class="resume-list skill-card"><i class="bx bx-data"        aria-hidden="true"></i><span>MySQL</span></li>
+                    <li class="resume-list skill-card"><i class="bx bx-cylinder"    aria-hidden="true"></i><span>Oracle</span></li>
+                    <li class="resume-list skill-card"><i class="bx bxl-mongodb"    aria-hidden="true"></i><span>MongoDB</span></li>
+                    <li class="resume-list skill-card"><i class="bx bxl-bootstrap"  aria-hidden="true"></i><span>Bootstrap</span></li>
+                    <li class="resume-list skill-card"><i class="bx bxl-github"     aria-hidden="true"></i><span>Git / GitHub</span></li>
+                </ul>
+            </div>
+
+            <!-- ── À PROPOS ── -->
+            <div class="resume-detail about" id="panel-about" role="tabpanel" aria-labelledby="tab-about" hidden>
+                <h2 class="heading">À <span>Propos</span></h2>
+                <p class="desc">Informations personnelles et langues.</p>
+                <div class="resume-listG scrollable single-col">
+
+                    <article class="resume-list about-card">
+                        <h3><i class="bx bx-user-circle" aria-hidden="true"></i> Informations Personnelles</h3>
+                        <dl class="about-grid">
+                            <div><dt>Nom</dt><dd> Nom Prenom</dd></div>
+                            <div><dt>Email</dt><dd><a href="mailto:kadirkadij50@gmail.com">kadirikhadija@gmail.com</a></dd></div>
+                            <div><dt>Téléphone</dt><dd><a href="tel:+212674387497">+212 6123456</a></dd></div>
+                            <div><dt>Localisation</dt><dd>caza, Maroc</dd></div>
+                            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">khadija-kadiri-75a047302</a></dd></div>
+                            <div><dt>GitHub</dt><dd><a href="https://github.com" target="_blank" rel="noopener noreferrer">Khadija1234-Kadiri</a></dd></div>
+                        </dl>
+                    </article>
+
+                    <article class="resume-list about-card">
+                        <h3><i class="bx bx-globe" aria-hidden="true"></i> Langues</h3>
+                        <ul class="lang-list" aria-label="Niveaux de langues">
+                            <li class="lang-item">
+                                <div class="lang-top">
+                                    <span class="lang-name">🇲🇦 Arabe</span>
+                                    <span class="lang-level">Langue maternelle</span>
+                                </div>
+                                
+                                
+                            </li>
+                            <li class="lang-item">
+                                <div class="lang-top">
+                                    <span class="lang-name">🇫🇷 Français</span>
+                                    <span class="lang-level">Intermédiaire </span>
+                                </div>
+                            
+                                   
+                            </li>
+                            <li class="lang-item">
+                                <div class="lang-top">
+                                    <span class="lang-name">🇬🇧 Anglais</span>
+                                    <span class="lang-level">Intermédiaire</span>
+                                </div>
+                               
+                                    
+                                
+                            </li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+
+        </div><!-- end right-box -->
+    </div><!-- end resume-container -->
+</section>
+
+<!-- ════════════════════════════════════
+     PORTFOLIO — article par projet
+════════════════════════════════════ -->
+<section class="portfolio" id="portfolio" aria-label="Mes projets">
+    <h2 class="heading">Mes <span>Projets</span></h2>
+    <div class="portfolio-container">
+
+        <div class="portfolio-box">
+
+            <article class="portfolio-detail active" aria-label="Projet 1 : Gestion PFE">
+                <p class="numb" aria-hidden="true">01</p>
+                <h3>Gestion des Projets de Fin d'Étude</h3>
+                <p>Application web complète — rôles utilisateurs, soumissions et évaluations des PFE.</p>
+                <div class="tech"><h4>HTML · CSS · PHP · MySQL · UML</h4></div>
+                <div class="lien">
+                 <!--   <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Voir le projet Gestion PFE">
+                        <i class="bx bx-link-external" aria-hidden="true"></i><span>Voir le projet</span> -->
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Code source GitHub du projet PFE">
+                        <i class="bx bxl-github" aria-hidden="true"></i><span>GitHub</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="portfolio-detail" aria-label="Projet 2 : Chatbot de voyage">
+                <p class="numb" aria-hidden="true">02</p>
+                <h3>Chatbot de Voyage </h3>
+                <p>Chatbot  — recommandations de destinations, conseils et FAQ voyage via Python + API.</p>
+                <div class="tech"><h4>Python · API </h4></div>
+                <div class="lien">
+                  <!--  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Voir le projet Chatbot Voyage">
+                        <i class="bx bx-link-external" aria-hidden="true"></i><span>Voir le projet</span>
+                    </a>-->
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Code source GitHub du chatbot">
+                        <i class="bx bxl-github" aria-hidden="true"></i><span>GitHub</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="portfolio-detail" aria-label="Projet 3 : Mini compilateur">
+                <p class="numb" aria-hidden="true">03</p>
+                <h3>Mini-Compilateur — Langage Simple</h3>
+                <p>Langage dédié aux expressions arithmétiques et logiques. Interpréteur et compilateur via PLY (Lex-Yacc).</p>
+                <div class="tech"><h4>Python · PLY · Lex-Yacc</h4></div>
+                <div class="lien">
+                  <!-- <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Voir le projet compilateur">
+                        <i class="bx bx-link-external" aria-hidden="true"></i><span>Voir le projet</span>
+                    </a>--> 
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Code source GitHub du compilateur">
+                        <i class="bx bxl-github" aria-hidden="true"></i><span>GitHub</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Carousel images -->
+        <div class="portfolio-box">
+            <div class="portfolio-carousel" aria-label="Captures d'écran des projets">
+                <div class="img-slide">
+                    <div class="img-item">
+                        <img src="pfe.png" alt="Capture d'écran de l'application Gestion PFE" width="600" height="320" loading="lazy">
+                    </div>
+                    <div class="img-item">
+                        <img src="chatbot.png" alt="Capture d'écran du chatbot de voyage" width="600" height="320" loading="lazy">
+                    </div>
+                    <div class="img-item">
+                        <img src="yacc.png" alt="Capture d'écran du mini-compilateur" width="600" height="320" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="navigation" role="group" aria-label="Navigation du carousel">
+                <button class="arrow-left disabled" aria-label="Projet précédent" aria-disabled="true">
+                    <i class="bx bx-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button class="arrow-right" aria-label="Projet suivant">
+                    <i class="bx bx-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ════════════════════════════════════
+     CONTACT + FOOTER
+     (footer à l'intérieur de la section car
+      les sections sont en position:absolute)
+════════════════════════════════════ -->
+<section class="contact" id="contact" aria-label="Contact">
+    <h2 class="heading">Me <span>Contacter</span></h2>
+
+    <div class="contact-container">
+
+        <!-- Infos de contact -->
+        <address class="contact-box" aria-label="Coordonnées">
+            <h2>Travaillons ensemble !</h2>
+            <p>Ouverte à tout stage ou collaboration. N'hésitez pas à me contacter !</p>
+    </div>
+    <div class="contact-container">
+            <div class="contact-detail">
+                <i class="bx bx-phone" aria-hidden="true"></i>
+                <div class="detail">
+                    <p>Téléphone</p>
+                    <a href="tel:+2126122344">+212 612 234 4</a>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="bx bx-envelope" aria-hidden="true"></i>
+                <div class="detail">
+                    <p>Email</p>
+                    <a href="mailto:kadirikhadija@gmail.com">kadirikhadija@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                <div class="detail">
+                    <p>LinkedIn</p>
+                    <a href="https://www.linkedin.com"
+                       target="_blank" rel="noopener noreferrer">khadija-kadiri-75a047302</a>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="bx bxl-github" aria-hidden="true"></i>
+                <div class="detail">
+                    <p>GitHub</p>
+                    <a href="https://github.com"
+                       target="_blank" rel="noopener noreferrer">Khadija-Kadiri</a>
+                </div>
+            </div>
+        </address>
+          
+        </div>
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <p class="footer-logo" aria-label="Khadija Kadiri">Nom<span>.</span></p>
+                <p class="footer-tagline">Etudiant · specialite · University</p>
+            </div>
+            <nav class="footer-contact-mini" aria-label="Liens de contact du footer">
+                <a href="tel:+2126122344" aria-label="Appeler Khadija">
+                    <i class="bx bx-phone" aria-hidden="true"></i>+212 612 234 4
+                </a>
+                <a href="mailto:kadirikhadija@gmail.com" aria-label="Envoyer un email à Khadija">
+                    <i class="bx bx-envelope" aria-hidden="true"></i>kadirikhadija@gmail.com
+                </a>
+                <a href="https://www.linkedin.com"
+                   target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Khadija">
+                    <i class="bx bxl-linkedin" aria-hidden="true"></i>LinkedIn
+                </a>
+                <a href="https://github.com"
+                   target="_blank" rel="noopener noreferrer" aria-label="GitHub de Khadija">
+                    <i class="bx bxl-github" aria-hidden="true"></i>GitHub
+                </a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Khadija Kadiri — Tous droits réservés.</p>
+            <p>Développé avec <span aria-label="amour" style="color:var(--accent)">♥</span> · Errachidia, Maroc</p>
+        </div>
+    </footer>
+
+</section><!-- end #contact -->
+
+<!-- JS en fin de body pour ne pas bloquer le rendu -->
+<script src="script.js" defer></script>
+</body>
+</html>
